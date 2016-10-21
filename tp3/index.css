@@ -1,1 +1,26 @@
 
+#error{background: pink;
+
+border: 1px solid black;
+
+
+
+}
+
+#resultat{
+
+	background: green;
+
+	border: black;
+
+}
+
+body{background: lightgrey;}
+
+
+
+table{
+
+background: white;
+
+}
