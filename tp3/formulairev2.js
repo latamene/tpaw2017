@@ -6,7 +6,7 @@ function validation(){
 
     var prenom=document.getElementById("prenom").value;
 
-    var date=document.getElementById("date").value;
+    var date=document.getElementById("datepicker").value;
 
     var adresse=document.getElementById("adresse").value;
 
