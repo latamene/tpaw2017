@@ -1,18 +1,50 @@
 
-<div class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <p>One fine body&hellip;</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+function validation(){
+
+    
+
+    
+
+    
+
+    var nom= document.getElementById("nom").value;
+
+    
+
+    
+
+    var prenom=document.getElementById("prenom").value;
+
+    var date=document.getElementById("date").value;
+
+    var adress=document.getElementById("adr").value;
+
+    var email=document.getElementById("mail").value;
+
+    
+
+    
+
+    if(nom == '' || prenom=="" || date=="" || adress=="" || email=="") {
+
+        $(".modal-body").html("La saisie des champs est obligatoire")
+
+          $('.modal').modal('show');
+
+    }
+
+       else if ((nom.length>=5)&&(prenom.length>=5)&& (date.length>=5)&&(adress.length>=5)&& (email.length>=5)){        
+
+            $(".modal-body").html('<img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284"/>');
+
+       }
+
+    else{
+
+        $(".modal-body").html("veuillez remplir tous les champs svp!")
+
+        $('.modal').modal('show');
+
+    }
+
+}
