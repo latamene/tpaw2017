@@ -7,25 +7,25 @@ function validation(){
 
     
 
-    var nom= document.getElementById("nom").value;
+    var Nom= document.getElementById("nom").value;
 
     
 
     
 
-    var prenom=document.getElementById("prenom").value;
+    var Prenom=document.getElementById("Prenom").value;
 
-    var date=document.getElementById("date").value;
+    var Date=document.getElementById("Date de naissance").value;
 
-    var adress=document.getElementById("adr").value;
+    var Adresse=document.getElementById("Adrresse").value;
 
-    var email=document.getElementById("mail").value;
-
-    
+    var Email=document.getElementById("Email").value;
 
     
 
-    if(nom == '' || prenom=="" || date=="" || adress=="" || email=="") {
+    
+
+if(Nom == '' || Prenom=="" || Date de naissance=="" || Adresse=="" || Email=="") {
 
         $(".modal-body").html("La saisie des champs est obligatoire")
 
@@ -33,7 +33,7 @@ function validation(){
 
     }
 
-       else if ((nom.length>=5)&&(prenom.length>=5)&& (date.length>=5)&&(adress.length>=5)&& (email.length>=5)){        
+       else if ((Nom.length>=5)&&(Prenom.length>=5)&& (Date.length>=5)&&(Adresse.length>=5)&& (Email.length>=5)){        
 
             $(".modal-body").html('<img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284"/>');
 
