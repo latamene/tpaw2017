@@ -1,1 +1,21 @@
 
+img{
+    height: 50px;
+	
+}
+
+.espaceAGaughe{
+	padding-left : 30px;
+}
+body{background: lightgrey;}
+
+.imgA img{
+	display:none;
+}
+.imgA:hover img{
+	display : inline-block;
+}
+.imgA:hover .txtA{
+	display:none;
+}
+table{width:100%;}
