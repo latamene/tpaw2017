@@ -1,5 +1,14 @@
 
-      #locationField, #controls {
+      
+	  body
+	  {  
+      background-image:url(FR.png);
+	  color:black;
+      background-color:white;
+      background-repeat:no-repeat;
+	  background-position:70% -90% ; 
+	  }  
+	  #locationField, #controls {
         position: relative;
         width: 480px;
       }
@@ -10,10 +19,10 @@
         width: 99%;
       }
       .label {
-        text-align: right;
+        text-align: left;
         font-weight: bold;
         width: 100px;
-        color: #303030;
+        color: black;
       }
       #address {
         border: 1px solid #000090;
@@ -30,9 +39,7 @@
       .slimField {
         width: 800px;
       }
-      .wideField {
-        width: 200px;
-      }
+      
       #locationField {
         height: 20px;
         margin-bottom: 2px;
