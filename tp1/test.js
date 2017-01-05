@@ -1,18 +1,6 @@
 
 
-
-
-
-
-
-
-
-
-
-
-// Cet exemple affiche un formulaire d'adresse, à l'aide de la fonction de saisie semi-automatique
-// de l'API Google Places pour aider les utilisateurs à remplir les informations.
-
+//affiche un formulaire d'adresse, à l'aide de la fonction de saisie semi-automatique
 var placeSearch, autocomplete;
 var componentForm = {
   //street_number: 'short_name',
@@ -23,11 +11,9 @@ var componentForm = {
   //postal_code: 'short_name'
 };
 
-
-
 function initAutocomplete() {
- // Create the autocomplete object, restricting the search to geographical
- // location types.
+ // Crée l'objet de saisie semi-automatique, restreignant la recherche au
+ // types d'emplacement.
  var options = {
   types: ['geocode'],
   componentRestrictions: {country: 'fr'}
@@ -36,12 +22,12 @@ function initAutocomplete() {
      /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
      options);
 
- // When the user selects an address from the dropdown, populate the address
- // fields in the form.
+ 
+// Lorsque l'utilisateur sélectionne une adresse dans la liste déroulante, renseigner l'adresse
+ // champs dans le formulaire.
  autocomplete.addListener('place_changed', fillInAddress);
 }
 
-// [START region_fillform]
 function fillInAddress() {
   // Obtenir les détails de l'objet de saisie semi-automatique.
   var place = autocomplete.getPlace();
@@ -61,9 +47,7 @@ function fillInAddress() {
     }
   }
 }
-// [END region_fillform]
 
-// [START region_geolocation]
 // Bias l'objet de saisie semi-automatique à l'emplacement géographique de l'utilisateur,
 // fourni par l'objet 'navigator.geolocation' du navigateur.
 function geolocate() {
@@ -81,5 +65,18 @@ function geolocate() {
     });
   }
 }
-// [END region_geolocation]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
