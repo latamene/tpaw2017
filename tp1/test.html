@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Place Autocomplete Address Form</title>
+    <title>formulaire</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">   
     </style>
@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="test.css">	
 	<script src="test.js"> </script>
   </head>
-  <body> 
-  <h1>bienvenue sur mon application</h1>
-  
-         
-    
-    <p>code postal</p><div id="locationField">
+  <body>
+ 
+  <h2><center>API Google Map et Script pour trouver la ville à partir d'un code postal français</center></h2>
+  <br />
+  <p>code postal</p>
+    <div id="locationField">
       <input id="autocomplete" placeholder="veillez saisir le code postal"
-             onFocus="geolocate()" type="number"></input>
-    </div>
-	
+             onFocus="geolocate()" type="number" /></input>
+	</div>
 <br />
     <table id="address">  
       <tr>
@@ -37,8 +36,7 @@
         <td class="wideField" colspan="3"><input class="field"
               id="country" disabled="true"></input></td>
       </tr>
-    </table>
-	
+    </table>	
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ1kPA2j7gOwayWLLlKzD3n4AYhfslzNA&signed_in=true&libraries=places&callback=initAutocomplete"
         async defer></script>
   </body>
