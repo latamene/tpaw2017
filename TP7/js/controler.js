@@ -6,17 +6,13 @@ meteoControllers.controller('MainController', ['$scope', '$http',
 	$scope.recherche = function() {
         $scope.errorMsg =  "";
         /* appel AJAX à l’API openweathermap */	    
-$http.get('https://demo.bilelz.fr/owmap/?q='+$scope.city+'&units=metric&appid=0ada432b59deb9716c357092c5f79be6') /* mettre votre API id */
-	    	 .success(function(data) {
-	    		/* on met dans l’objet meteo les données retournées par openweathermap */
-	    		 $scope.meteo = data;
-                 if(data == ""){
-                    $scope.errorMsg =  "Pas de résultat pour votre recherche..."; 
-                 }
-	    	 }).error(function(data) {
-	    		/* en cas d’erreur */
-	    		 $scope.errorMsg =  "Hum. Error... please retry.";
-	    	 });
+$http.get('https://demo.bilelz.fr/owmap/forecast/?q='+$scope.city+'&units=metric&lang=fr&appid=2de143494c0b295cca9337e1e96b00e0')
+		    	 .success(function(data) {
+		    		 $scope.forecast = data;
+		    	 }).error(function(data) {
+		    		 $scope.loadingMsg = "Erreur pour les données sur 5 jours...";
+		    	 });
+
 	}
 
 	$scope.gps = function() {
