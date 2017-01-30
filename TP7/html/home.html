@@ -18,7 +18,9 @@
     <!-- TP7 : ici, on gère l’affichage des messages d’erreur  selon l’état du champ de saisie -->
     <div ng-messages="myForm.city.$error" role="alert">
 	    <div ng-message="required" class="label label-danger">Veuillez saisir une ville SVP</div>
-	  </div>-->
+	    <div ng-message="minlength" class="label label-danger">message très court</div>
+	    <div ng-message="maxlength" class="label label-danger">message très long</div>
+	  </div>
 </form>
 
 <div ng-if="meteo" class="text-center">
